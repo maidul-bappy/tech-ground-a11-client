@@ -8,7 +8,7 @@ const AddAdmin = () => {
 		const eventData = {
 			email: data.email
 		}
-		fetch('http://localhost:5000/addAdmin', {
+		fetch('https://polar-dusk-19888.herokuapp.com/addAdmin', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(eventData)

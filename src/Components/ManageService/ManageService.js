@@ -9,7 +9,7 @@ const ManageService = () => {
 	const [services, setServices] = useState([]);
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
-		fetch('http://localhost:5000/services')
+		fetch('https://polar-dusk-19888.herokuapp.com/services')
 			.then(res => res.json())
 			.then(data => {
 				setServices(data)
@@ -17,7 +17,7 @@ const ManageService = () => {
 			})
 	}, [])
 	const deleteService = (id, event) => {
-		fetch(`http://localhost:5000/delete/${id}`, {
+		fetch(`https://polar-dusk-19888.herokuapp.com/delete/${id}`, {
 			method: 'DELETE',
 		})
 			.then(response => response.json())

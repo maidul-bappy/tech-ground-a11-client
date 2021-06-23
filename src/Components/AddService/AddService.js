@@ -18,7 +18,7 @@ const AddService = () => {
 			name: loggedInUser.name,
 			email:loggedInUser.email
 		}
-		fetch('http://localhost:5000/addService', {
+		fetch('https://polar-dusk-19888.herokuapp.com/addService', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(eventData)

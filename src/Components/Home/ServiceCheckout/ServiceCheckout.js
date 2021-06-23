@@ -13,7 +13,7 @@ const ServiceCheckout = () => {
 	const [getPayId, setGetPayId] = useState('');
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
-		fetch('http://localhost:5000/services/'+serviceKey)
+		fetch('https://polar-dusk-19888.herokuapp.com/services/'+serviceKey)
 			.then(res => res.json())
 			.then(data => {
 				setService(data)
@@ -25,7 +25,7 @@ const ServiceCheckout = () => {
 		const orderDetails = {
 			...loggedInUser, ...service, paymentId: getPayId, quantity: 1, status: 'Pending', orderTime: new Date()
 		}
-		fetch('http://localhost:5000/addOrder', {
+		fetch('https://polar-dusk-19888.herokuapp.com/addOrder', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(orderDetails)

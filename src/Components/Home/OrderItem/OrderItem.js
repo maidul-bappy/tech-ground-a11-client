@@ -9,7 +9,7 @@ const OrderItem = () => {
 	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
-		fetch('http://localhost:5000/orderItems?email=' + loggedInUser.email)
+		fetch('https://polar-dusk-19888.herokuapp.com/orderItems?email=' + loggedInUser.email)
 			.then(res => res.json())
 			.then(data => {
 				setOrderItems(data)

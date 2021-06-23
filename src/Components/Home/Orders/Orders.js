@@ -7,7 +7,7 @@ const Orders = () => {
 	const [orders, setOrders] = useState([])
 	const [loading, setLoading] = useState(true);
 	useEffect(() => {
-		fetch('http://localhost:5000/orders')
+		fetch('https://polar-dusk-19888.herokuapp.com/orders')
 			.then(res => res.json())
 			.then(data => {
 				setOrders(data)
@@ -20,7 +20,7 @@ const Orders = () => {
 			value: value,
 			_id: id
 		}
-		fetch(`http://localhost:5000/update/${status._id}`, {
+		fetch(`https://polar-dusk-19888.herokuapp.com/update/${status._id}`, {
 			method: 'PATCH',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(status),

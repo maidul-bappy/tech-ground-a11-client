@@ -14,7 +14,7 @@ const AddReview = () => {
 			description: data.description,
 			imageUrl:imageUrl
 		}
-		fetch('http://localhost:5000/addReview', {
+		fetch('https://polar-dusk-19888.herokuapp.com/addReview', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(eventData)
